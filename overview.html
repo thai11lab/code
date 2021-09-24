@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/overview.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="container">
+            <div class="row">
+                <div class="aside col-3">
+                    <ul class="list-aside-item">
+                        <li class="active-aside">
+                            <a href="overview.html">Overview</a>
+                        </li>
+                        <li>
+                            <a href="traffic.html">Traffic</a>
+                        </li>
+                        <li>
+                            <a href="#">Errors</a>
+                        </li>
+                        <li>
+                            <a href="#">Latency</a>
+                        </li>
+                        <li>
+                            <a href="#">Cache</a>
+                        </li>
+                        <li>
+                            <a href="#">Devices</a>
+                        </li>
+                        <li>
+                            <a href="#">Alerts</a>
+                        </li>
+                        <li>
+                            <a href="#">Reports</a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Configuration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="analytics2 col-9">
+                    <div class="filter-data">
+                        <ul class="input-data">
+                            <li>
+                                <select id="filter-date" class="selectpicker" data-width="fit" data-show-content="true"
+                                    class="form-control">
+                                    <option data-icon="<i class='fas fa-clock'></i>">Past 15 hours</option>
+                                    <option>Past 20 hours</option>
+                                    <option>Past 24 hours</option>
+                                </select>
+                            </li>
+                            <li class="input-form">
+                                <label for="form">Environment</label>
+                                <input type="text" value="Choreo" name="form">
+                            </li>
+                        </ul>
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="number-analyist">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 item-number-analyist">
+                                <div class="content">
+                                    <div class="number">
+                                        <h3>
+                                            <img src="">
+                                            0
+                                        </h3>
+                                    </div>
+                                    <div class="row chu-duoi">
+                                        <p>Total Traffic</p>
+                                        <div class="o-click">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-3 item-number-analyist">
+                                <div class="content">
+                                    <div class="number">
+                                        <h3>
+                                            <img src="">
+                                            0
+                                        </h3>
+                                    </div>
+                                    <div class="row chu-duoi">
+                                        <p>Error Request</p>
+                                        <a href="">
+                                            <div class="o-click">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-3 item-number-analyist">
+                                <div class="content">
+                                    <div class="number">
+                                        <h3>
+                                            <img src="">
+                                            0<a>%</a>
+                                        </h3>
+                                    </div>
+                                    <div class="row chu-duoi">
+                                        <p>Average Error Rate</p>
+                                        <div class="o-click">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-3 item-number-analyist">
+                                <div class="content">
+                                    <div class="number">
+                                        <h3>
+                                            <img src="">
+                                            0<a>MS</a>
+                                        </h3>
+                                    </div>
+                                    <div class="row chu-duoi">
+                                        <p>Total Traffic</p>
+                                        <div class="o-click">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bieu-do">
+                        <div class="row">
+                            <div class="content">
+                                <div class="content-text-chart">
+                                    <p class="text-api">API Request Summary</p>
+                                    <ul class="icon-chart">
+                                        <li>
+                                            <button class="btn-report">
+                                                <span>
+                                                    <img src="/images/download-analytics-report.svg">
+                                                </span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn-search">
+                                                <span>
+                                                    <i class="fas fa-search-plus"></i>
+                                                </span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/get-chart.js">
+    
+</script>
+
+</html>
